@@ -1,0 +1,35 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+`isw-footer-button-area`
+Area for persistent footer buttons.
+
+@demo demo/index.html
+-->
+
+<dom-module id="isw-footer-button-area">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]</h2>
+  </template>
+
+  <script>
+    class MyElement extends Polymer.Element {
+      static get is() { return 'isw-footer-button-area'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'isw-footer-button-area'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(MyElement.is, MyElement);
+  </script>
+</dom-module>
