@@ -11,25 +11,26 @@ Area for persistent footer buttons.
   <template>
     <style>
       :host {
-        display: block;
+        @apply --layout-horizontal;
+        @apply --layout-end-justified;
+
+        padding: 8px 3px;
+        border-top: 1px solid var(--divider-color);
+        background: var(--primary-background-color);
+      }
+
+      ::slotted(paper-button) {
+        color: var(--accent-color);;
       }
     </style>
-    <h2>Hello [[prop1]]</h2>
+    <slot></slot>
   </template>
 
   <script>
-    class MyElement extends Polymer.Element {
+    class IswFooterButtonArea extends Polymer.Element {
       static get is() { return 'isw-footer-button-area'; }
-      static get properties() {
-        return {
-          prop1: {
-            type: String,
-            value: 'isw-footer-button-area'
-          }
-        };
-      }
     }
 
-    window.customElements.define(MyElement.is, MyElement);
+    window.customElements.define(IswFooterButtonArea.is, IswFooterButtonArea);
   </script>
 </dom-module>
