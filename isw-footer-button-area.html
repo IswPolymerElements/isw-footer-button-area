@@ -27,6 +27,10 @@ Area for persistent footer buttons.
       ::slotted(paper-button) {
         color: var(--accent-color);
       }
+
+      ::slotted(paper-button[disabled]) {
+        color: rgba( 0, 0, 0, 0.26 );
+      }
     </style>
     <slot></slot>
   </template>
